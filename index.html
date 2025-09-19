@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MogaSearch - Simple. Fast. Personalized, only for you Onii-chan &gt;///&lt;.</title>
+  <style>
+    body,main{flex-direction:column;display:flex}#searchInput,#suggestions{background:var(--glass-bg);box-shadow:0 8px 32px var(--shadow-color)}.shortcut .ico,.shortcuts,body,main{display:flex}.header,.news-header,.shortcut{text-align:center}#searchInput,#suggestions,.news-card{box-shadow:0 8px 32px var(--shadow-color)}#loadMoreBtn,.shortcuts-note{margin-top:24px}.sidebar,body{overflow-x:hidden}:root{--bg-color:#0c0a12;--glass-bg:rgba(25, 22, 36, 0.5);--glass-border:rgba(255, 255, 255, 0.1);--muted:#a097c2;--accent:#e073ff;--accent-rgb:224,115,255;--text-main:#f0ebff;--text-darker:#c7c0e0;--shadow-color:rgba(0, 0, 0, 0.5);--font-main:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;--font-brand:system-ui,sans-serif}*,::after,::before{box-sizing:border-box}body,html{height:100%;margin:0}body{background-color:var(--bg-color);background-image:url('https://i.pinimg.com/originals/b4/a6/53/b4a65342d625f9b92705031b920b784e.gif');background-size:cover;background-position:center;background-attachment:fixed;color:var(--text-main);font-family:var(--font-main);align-items:center;padding:24px}.brand,.sidebar-header h2,a{color:var(--accent)}a{text-decoration:none}@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}main{width:100%;align-items:center;gap:36px;padding:24px 0;animation:.7s ease-out forwards fadeInUp}.content-section{width:100%;max-width:900px;display:flex;flex-direction:column;align-items:center}.brand{font-family:var(--font-brand);font-size:32px;margin-bottom:8px;font-weight:700;text-shadow:0 0 8px rgba(var(--accent-rgb),.5)}.btn,.news-header,.news-title,.tab-btn{font-weight:600}.subtitle{color:var(--muted);font-size:14px}#searchInput,.shortcut:hover,.suggestion-item{color:var(--text-main)}.search-wrap{width:100%;max-width:680px;position:relative}#searchInput{width:100%;border-radius:999px;border:1px solid var(--glass-border);padding:16px 24px;font-size:16px;outline:0;-webkit-appearance:none;transition:.3s;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}#searchInput::placeholder{color:var(--muted)}#searchInput:focus{border-color:var(--accent);box-shadow:0 0 16px rgba(var(--accent-rgb),.6),0 8px 32px var(--shadow-color)}#suggestions{position:absolute;left:0;right:0;margin-top:12px;border-radius:16px;display:none;z-index:150;max-height:280px;overflow:hidden;border:1px solid var(--glass-border);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}.suggestion-item{padding:12px 20px;cursor:pointer}.shortcut,.shortcuts-note{color:var(--muted);font-size:12px}.suggestion-item.active,.suggestion-item:hover{background:rgba(var(--accent-rgb),.1)}.news-card,.shortcut .ico{border-radius:16px;background:var(--glass-bg);overflow:hidden}.shortcuts{flex-wrap:wrap;gap:20px;justify-content:center}.shortcut{width:84px;transition:transform .2s}.shortcut:hover{transform:translateY(-5px)}.shortcut .ico{width:60px;height:60px;align-items:center;justify-content:center;margin:0 auto 10px;border:1px solid var(--glass-border);transition:.2s;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}.shortcut:hover .ico{box-shadow:0 0 12px rgba(var(--accent-rgb),.5);border-color:rgba(var(--accent-rgb),.5)}.shortcut img{width:32px;height:32px;object-fit:cover}.news-header{font-size:20px;margin-bottom:20px;color:var(--text-main)}.news-grid,.placeholder-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;width:100%}.news-card{transition:transform .3s,box-shadow .3s;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--glass-border)}.news-card:hover{transform:translateY(-8px);box-shadow:0 0 20px rgba(var(--accent-rgb),.5),0 8px 32px var(--shadow-color)}.news-img{width:100%;height:150px;object-fit:cover;background-color:#222}.news-body{padding:16px}.news-source{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin-bottom:8px}.news-title,.sidebar{color:var(--text-main)}.news-title{font-size:15px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}#loadMoreBtn{display:none}.placeholder-card{border-radius:16px;overflow:hidden;height:255px;background:linear-gradient(90deg,var(--glass-bg) 25%,rgba(25,22,36,.8) 37%,var(--glass-bg) 63%);background-size:400% 100%;animation:1.5s linear infinite shimmer}@keyframes shimmer{0%{background-position:100% 0}100%{background-position:-100% 0}}#customizeBtn{position:fixed;right:20px;bottom:20px;border-radius:50%;width:56px;height:56px;border:1px solid rgba(var(--accent-rgb),.5);background:var(--accent);color:#10081a;font-size:24px;cursor:pointer;box-shadow:0 0 20px rgba(var(--accent-rgb),.7);transition:.3s;z-index:998}#customizeBtn:hover{transform:scale(1.1) rotate(45deg)}.sidebar{position:fixed;top:0;right:-420px;width:420px;height:100%;z-index:999;display:flex;flex-direction:column;transition:right .4s cubic-bezier(.2, 1, .2, 1);box-shadow:-12px 0 30px var(--shadow-color);background:rgba(12,10,18,.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-left:1px solid var(--glass-border);overflow-y:auto}.sidebar.open{right:0}.sidebar-header{display:flex;align-items:center;justify-content:space-between;padding:18px;border-bottom:1px solid var(--glass-border);position:sticky;top:0;background:rgba(12,10,18,.5);z-index:10}.close-btn,.tab-btn{background:0 0;color:var(--text-darker);transition:.2s;cursor:pointer}.sidebar-header h2{margin:0;font-size:16px}.close-btn{border:none;font-size:24px;padding:6px;border-radius:50%;line-height:1}.close-btn:hover{color:#fff;background-color:rgba(var(--accent-rgb),.2);transform:rotate(90deg)}.tabs{display:flex;border-bottom:1px solid var(--glass-border)}.tab-btn{flex:1;padding:14px 10px;border:none;border-bottom:3px solid transparent}.btn,.field{border-radius:8px}.field:focus,.thumb:hover{border-color:var(--accent)}.tab-btn.active{color:#fff;border-bottom-color:var(--accent)}.tab-content{padding:16px 20px 60px;flex:1}.gallery,.row{flex-wrap:wrap}.tab-panel{display:none}.tab-panel.active{display:block}.control-row,.gallery,.list-row,.row{display:flex}.sidebar::-webkit-scrollbar{width:8px}.sidebar::-webkit-scrollbar-thumb{background:rgba(var(--accent-rgb),.3);border-radius:8px}.sidebar::-webkit-scrollbar-track{background:0 0}.row{gap:12px}.col{flex:1;min-width:140px}.field{width:100%;padding:10px 12px;border:1px solid var(--glass-border);background:rgba(0,0,0,.2);color:var(--text-main);font-size:14px;transition:border-color .2s}.field:focus{outline:0}.btn{padding:10px 14px;border:none;background:var(--accent);color:#10081a;cursor:pointer;transition:opacity .2s}.btn:hover{opacity:.9}.ghost{background:rgba(255,255,255,.05);color:var(--muted)}.ghost:hover{background:rgba(255,255,255,.1)}.danger{background:#ff6b6b;color:#081018}.gallery{gap:10px;margin-top:10px}.thumb{width:110px;height:66px;border-radius:8px;overflow:hidden;cursor:pointer;box-shadow:0 4px 12px var(--shadow-color);border:2px solid transparent;transition:.2s}.thumb:hover{transform:scale(1.05)}.thumb img{width:100%;height:100%;object-fit:cover}.control-row{gap:8px;margin-top:10px;flex-wrap:wrap}.muted{color:var(--muted);font-size:13px}.list-row{align-items:center;justify-content:space-between;padding:10px 4px;border-bottom:1px solid var(--glass-border);gap:10px}.list-row .meta{display:flex;gap:10px;align-items:center;min-width:0}.list-row .meta span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}@media (max-width:640px){.sidebar{width:100%;right:-100%}.sidebar.open{right:0}body{padding:16px}main{gap:28px}.brand{font-size:28px}.subtitle{font-size:13px}}
+  </style>
+</head>
+<body>
+
+  <main>
+    <header class="header">
+      <div class="brand">MogaSearch</div>
+      <div class="subtitle">Simple. Fast. Personalized, only for you Onii-chan &gt;///&lt;.</div>
+    </header>
+
+    <section class="content-section">
+      <div class="search-wrap">
+        <form id="searchForm" role="search">
+          <input id="searchInput" autocomplete="off" placeholder="Search (prefix 'yt:', 'gh:') atau type anything..." />
+        </form>
+        <div id="suggestions" role="listbox"></div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="shortcuts" id="shortcuts"></div>
+      <div class="shortcuts-note">Shortcuts (max <span id="limitCount"></span>) — Click ⚙ to Customize</div>
+    </section>
+    <!-- Online warning (Mouto-chan style) -->
+<div id="onlineWarning" style="display:none;max-width:1000px;margin:20px auto;padding:16px;border-radius:12px;background:#1a1d24;color:#eaf0fb;font-size:15px;line-height:1.6;box-shadow:0 4px 16px rgba(0,0,0,0.4);text-align:center">
+  <p>
+    This startpage works best as a <strong>local HTML file</strong>. For full features (shortcuts, backgrounds, privacy), please <em>download and use it locally</em>.
+  </p>
+  <a href="https://github.com/rafiq8k-moga/MogaSearch" target="_blank" style="display:inline-block;margin-top:10px;padding:8px 14px;background:#ff92d0;color:#111;border-radius:8px;font-weight:600;text-decoration:none">
+    💾 Download from GitHub
+  </a>
+</div>
+
+
+    <section class="content-section" id="newsSection">
+      <h2 class="news-header">Latest News</h2>
+      <div id="newsGrid" class="news-grid"></div>
+      <div id="newsPlaceholder" class="placeholder-grid"></div>
+      <button id="loadMoreBtn" class="btn">Motto, MOTTO!!!</button>
+    </section>
+  </main>
+
+  <button id="customizeBtn" title="Customize">⚙️</button>
+
+  <aside class="sidebar" id="sidebar" aria-hidden="true">
+    <div class="sidebar-header">
+      <h2>Customize MogaSearch</h2>
+      <button class="close-btn" id="closeSidebarBtn" aria-label="Close">×</button>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="tab-shortcuts" role="tab">Shortcuts</button>
+      <button class="tab-btn" data-tab="tab-prefixes" role="tab">Prefixes</button>
+      <button class="tab-btn" data-tab="tab-background" role="tab">Background</button>
+    </div>
+    <div class="tab-content">
+      <div class="tab-panel active" id="tab-shortcuts" role="tabpanel">
+        <strong>Add Shortcut</strong>
+        <div class="row" style="margin-top:8px">
+          <input id="siteName" class="field col" placeholder="Site Name (ex: YouTube)" />
+          <input id="siteURL" class="field col" placeholder="https://example.com" />
+          <button class="btn" id="addShortcutBtn">Add</button>
+        </div>
+        <hr style="border-color:var(--glass-border); margin: 20px 0;">
+        <strong>Shortcut List</strong>
+        <div id="allShortcutsList" style="margin-top:12px"></div>
+      </div>
+      <div class="tab-panel" id="tab-prefixes" role="tabpanel">
+        <strong>Prefixes (search shortcuts)</strong>
+        <div class="row" style="margin-top:8px">
+          <input id="prefixKey" class="field col" placeholder="prefix (cth: yt:)" />
+          <input id="prefixURL" class="field col" placeholder="Url with %s" />
+          <p>for example: google.com/search?p=%s</p>
+          <button class="btn" id="addPrefixBtn">Add</button>
+        </div>
+        <hr style="border-color:var(--glass-border); margin: 20px 0;">
+        <strong>Prefix List</strong>
+        <div id="prefixList" style="margin-top:10px"></div>
+      </div>
+      <div class="tab-panel" id="tab-background" role="tabpanel">
+        <strong>Background</strong>
+        <p class="muted" style="margin-top:8px">Choose from the gallery, Upload your own, or just solid color.</p>
+        <div style="margin-top:16px">
+          <strong class="muted"><small>Upload Image</small></strong>
+          <input id="uploadInput" type="file" accept="image/*" class="field" style="margin-top:8px" />
+        </div>
+        <div style="margin-top:16px">
+          <strong class="muted"><small>Set Solid Color</small></strong>
+          <div class="control-row" style="margin-top:8px">
+            <input id="colorInput" class="field" placeholder="#112233 atau red" />
+            <button class="btn" id="setColorBtn">Set</button>
+            <button class="ghost btn" id="resetBgBtn">Reset</button>
+          </div>
+        </div>
+        <div style="margin-top:16px">
+          <strong class="muted"><small>Galeri</small></strong>
+          <div id="gallery" class="gallery"></div>
+          <div id="galleryMsg" class="muted" style="margin-top:6px"></div>
+        </div>
+
+      </div>
+    </div>
+  </aside>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{let e={STORAGE_KEYS:{SHORTCUTS:"ms_shortcuts_v2",PREFIXES:"ms_prefixes_v2",BG:"ms_bg_v2",HISTORY:"ms_history_v2"},DEFAULTS:{shortcuts:[{name:"YouTube",url:"https://youtube.com"},{name:"MyAnimeList",url:"https://myanimelist.net"},{name:"Reddit Anime",url:"https://reddit.com/r/anime"},{name:"Twitter",url:"https://twitter.com"}],prefixes:{"yt:":"https://www.youtube.com/results?search_query=%s","mal:":"https://myanimelist.net/search/all?q=%s","gh:":"https://github.com/search?q=%s","rd:":"https://www.reddit.com/search/?q=%s"},bgDefault:"url('https://i.pinimg.com/originals/b4/a6/53/b4a65342d625f9b92705031b920b784e.gif')"},GALLERY_JSON_URL:"https://raw.githubusercontent.com/rafiq8k-moga/MogaSearch/refs/heads/main/assets/gallery.json",MAX_SHORTCUTS_SHOW:12,SUGGESTION_LIMIT:10,NEWS_FEED_URL:"https://api.allorigins.win/get?url="+encodeURIComponent("https://news.google.com/rss/search?q=anime+manga&hl=id&gl=ID&ceid=ID:id"),NEWS_PAGE_SIZE:8};"file:"!==location.protocol&&(document.getElementById("onlineWarning").style.display="block");let t={shortcuts:[],prefixes:{},bgSetting:"",searchHistory:[],news:{articles:[],page:0,isLoading:!1},activeSuggestionIndex:-1,jsonpScript:null,debounceTimer:null},s=e=>document.querySelector(e),a=e=>document.querySelectorAll(e),r={body:document.body,searchInput:s("#searchInput"),searchForm:s("#searchForm"),suggestionsBox:s("#suggestions"),shortcutsContainer:s("#shortcuts"),limitCount:s("#limitCount"),sidebar:s("#sidebar"),customizeBtn:s("#customizeBtn"),closeSidebarBtn:s("#closeSidebarBtn"),tabButtons:a(".tab-btn"),tabPanels:a(".tab-panel"),siteNameInput:s("#siteName"),siteUrlInput:s("#siteURL"),addShortcutBtn:s("#addShortcutBtn"),allShortcutsList:s("#allShortcutsList"),prefixKeyInput:s("#prefixKey"),prefixUrlInput:s("#prefixURL"),addPrefixBtn:s("#addPrefixBtn"),prefixList:s("#prefixList"),galleryContainer:s("#gallery"),galleryMsg:s("#galleryMsg"),uploadInput:s("#uploadInput"),colorInput:s("#colorInput"),setColorBtn:s("#setColorBtn"),resetBgBtn:s("#resetBgBtn"),newsGrid:s("#newsGrid"),newsPlaceholder:s("#newsPlaceholder"),loadMoreBtn:s("#loadMoreBtn")},i=(e,t)=>{let s=localStorage.getItem(e);try{return s?JSON.parse(s):t}catch(a){return t}},n=(e,t)=>localStorage.setItem(e,JSON.stringify(t)),l=e=>String(e).replace(/[&<>"']/g,e=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[e]),o=e=>/^https?:\/\//i.test(e)?e:"https://"+e,c=t=>{r.body.style.backgroundImage=t||e.DEFAULTS.bgDefault,t&&!t.startsWith("url")?(r.body.style.backgroundColor=t,r.body.style.backgroundImage="none"):r.body.style.backgroundColor="var(--bg-color)"},d=()=>{r.shortcutsContainer.innerHTML="";let s=t.shortcuts.slice(0,e.MAX_SHORTCUTS_SHOW);s.forEach(e=>{let t=new URL(e.url).hostname,s=document.createElement("a");s.className="shortcut",s.href=e.url,s.target="_blank",s.innerHTML=`<div class="ico"><img src="https://www.google.com/s2/favicons?sz=64&domain=${t}" alt=""></div><div>${l(e.name)}</div>`,r.shortcutsContainer.appendChild(s)})},u=()=>{if(r.allShortcutsList.innerHTML="",0===t.shortcuts.length){r.allShortcutsList.innerHTML='<p class="muted">Belum ada shortcut.</p>';return}t.shortcuts.forEach((e,t)=>{let s=new URL(e.url).hostname,a=document.createElement("div");a.className="list-row",a.innerHTML=`<div class="meta"><img src="https://www.google.com/s2/favicons?sz=24&domain=${s}" style="width:20px;height:20px;border-radius:4px" alt=""/><span>${l(e.name)} — <small style="color:#7f8c9a">${l(e.url)}</small></span></div><button class="ghost btn danger" data-action="delete" data-index="${t}">Hapus</button>`,r.allShortcutsList.appendChild(a)})},g=()=>{r.prefixList.innerHTML="";let e=Object.keys(t.prefixes);if(0===e.length){r.prefixList.innerHTML='<p class="muted">Belum ada prefix.</p>';return}e.forEach(e=>{let s=document.createElement("div");s.className="list-row",s.innerHTML=`<div class="meta"><span><strong>${l(e)}</strong> → ${l(t.prefixes[e])}</span></div><button class="ghost btn danger" data-action="delete" data-key="${l(e)}">Hapus</button>`,r.prefixList.appendChild(s)})},p=()=>{let s=t.news.page*e.NEWS_PAGE_SIZE,a=s+e.NEWS_PAGE_SIZE,i=t.news.articles.slice(s,a);i.forEach(e=>{let t=`https://www.google.com/s2/favicons?sz=32&domain=${e.source}`,s=document.createElement("div");s.className="news-card",s.innerHTML=`${e.img?`<img src="${e.img}" class="news-img" loading="lazy">`:`<div class="news-img" style="background:#222 url('${t}') center/32px no-repeat"></div>`}<div class="news-body"><div class="news-source"><img src="${t}" width="14" height="14" loading="lazy"> ${e.source}</div><a href="${e.link}" target="_blank" rel="noopener noreferrer" class="news-title">${e.title}</a></div>`,r.newsGrid.appendChild(s)}),t.news.page++,r.loadMoreBtn.style.display=a<t.news.articles.length?"block":"none"},h=s=>{let a=(s||"").trim();if(!a)return;let r=Object.keys(t.prefixes).find(e=>a.startsWith(e)),i;if(r){let l=a.slice(r.length).trim();i=t.prefixes[r].replace("%s",encodeURIComponent(l))}else i="https://www.google.com/search?q="+encodeURIComponent(a);t.searchHistory=[a,...t.searchHistory.filter(e=>e!==a)].slice(0,50),n(e.STORAGE_KEYS.HISTORY,t.searchHistory),window.location.href=i},m=async()=>{r.galleryContainer.innerHTML="",r.galleryMsg.textContent="Memuat galeri...";try{let t=await fetch(e.GALLERY_JSON_URL,{cache:"no-cache"});if(!t.ok)throw Error("Gagal mengambil data galeri");let s=await t.json();if(!Array.isArray(s)||0===s.length){r.galleryMsg.textContent="Galeri kosong.";return}r.galleryMsg.textContent="",s.forEach(t=>{let s=document.createElement("div");s.className="thumb",s.innerHTML=`<img src="${t}" alt="background-thumb" loading="lazy">`,s.addEventListener("click",()=>{let s=`url('${t}')`;localStorage.setItem(e.STORAGE_KEYS.BG,s),c(s)}),r.galleryContainer.appendChild(s)})}catch(a){r.galleryMsg.textContent="Gagal memuat galeri.",console.error("Gallery load failed",a)}},S=async()=>{if(!t.news.isLoading){t.news.isLoading=!0,r.newsGrid.innerHTML="",r.newsPlaceholder.innerHTML=[,,,,].fill('<div class="placeholder-card"></div>').join(""),r.newsPlaceholder.style.display="grid";try{let s=await fetch(e.NEWS_FEED_URL),a=await s.json(),i=new DOMParser().parseFromString(a.contents,"text/xml");t.news.articles=[...i.querySelectorAll("item")].map(e=>({title:e.querySelector("title")?.textContent||"Tanpa Judul",link:e.querySelector("link")?.textContent||"#",source:new URL(e.querySelector("link")?.textContent).hostname,img:e.querySelector("media\\:content")?.getAttribute("url")||null})),t.news.page=0,p()}catch(n){r.newsGrid.innerHTML="<p class='muted'>Gagal memuat berita.</p>",console.error("News fetch error:",n)}finally{t.news.isLoading=!1,r.newsPlaceholder.style.display="none"}}},E=e=>{"open"===e?(r.sidebar.classList.add("open"),r.sidebar.setAttribute("aria-hidden","false"),u(),g()):(r.sidebar.classList.remove("open"),r.sidebar.setAttribute("aria-hidden","true"))};function f(){t.shortcuts=i(e.STORAGE_KEYS.SHORTCUTS,e.DEFAULTS.shortcuts),t.prefixes=i(e.STORAGE_KEYS.PREFIXES,e.DEFAULTS.prefixes),t.bgSetting=localStorage.getItem(e.STORAGE_KEYS.BG),t.searchHistory=i(e.STORAGE_KEYS.HISTORY,[]),r.limitCount.textContent=e.MAX_SHORTCUTS_SHOW,c(t.bgSetting),d(),S(),m(),r.customizeBtn.addEventListener("click",()=>E("open")),r.closeSidebarBtn.addEventListener("click",()=>E("close")),r.loadMoreBtn.addEventListener("click",p),r.searchForm.addEventListener("submit",e=>{e.preventDefault(),h(r.searchInput.value)}),r.tabButtons.forEach(e=>{e.addEventListener("click",()=>{let t=e.dataset.tab;r.tabButtons.forEach(e=>e.classList.remove("active")),e.classList.add("active"),r.tabPanels.forEach(e=>e.classList.toggle("active",e.id===t))})}),r.addShortcutBtn.addEventListener("click",()=>{let s=r.siteNameInput.value.trim(),a=r.siteUrlInput.value.trim();if(!s||!a)return alert("Nama dan URL harus diisi.");t.shortcuts.unshift({name:s,url:o(a)}),n(e.STORAGE_KEYS.SHORTCUTS,t.shortcuts),d(),u(),r.siteNameInput.value="",r.siteUrlInput.value=""}),r.allShortcutsList.addEventListener("click",s=>{if("delete"===s.target.dataset.action){let a=parseInt(s.target.dataset.index,10);confirm(`Hapus shortcut "${t.shortcuts[a].name}"?`)&&(t.shortcuts.splice(a,1),n(e.STORAGE_KEYS.SHORTCUTS,t.shortcuts),d(),u())}}),r.addPrefixBtn.addEventListener("click",()=>{let s=r.prefixKeyInput.value.trim(),a=r.prefixUrlInput.value.trim();if(!s||!a||!a.includes("%s"))return alert("Prefix dan URL (dengan %s) harus valid.");t.prefixes[s]=a,n(e.STORAGE_KEYS.PREFIXES,t.prefixes),g(),r.prefixKeyInput.value="",r.prefixUrlInput.value=""}),r.prefixList.addEventListener("click",s=>{if("delete"===s.target.dataset.action){let a=s.target.dataset.key;confirm(`Hapus prefix "${a}"?`)&&(delete t.prefixes[a],n(e.STORAGE_KEYS.PREFIXES,t.prefixes),g())}}),r.uploadInput.addEventListener("change",t=>{let s=t.target.files[0];if(!s||!s.type.startsWith("image/"))return;let a=new FileReader;a.onload=t=>{let s=t.target.result,a=`url('${s}')`;localStorage.setItem(e.STORAGE_KEYS.BG,a),c(a),alert("Background dari file lokal telah disimpan.")},a.readAsDataURL(s)}),r.setColorBtn.addEventListener("click",()=>{let t=r.colorInput.value.trim();t&&(localStorage.setItem(e.STORAGE_KEYS.BG,t),c(t))}),r.resetBgBtn.addEventListener("click",()=>{confirm("Reset background ke default?")&&(localStorage.removeItem(e.STORAGE_KEYS.BG),c(e.DEFAULTS.bgDefault))})}f()});
+</script>
+</body>
+</html>
