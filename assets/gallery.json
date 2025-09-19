@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://cdn.example.com/bg/anime1.jpg",
+    "title": "Anime 1"
+  },
+  {
+    "url": "https://cdn.example.com/bg/anime2.jpg",
+    "title": "Anime 2"
+  },
+  {
+    "url": "https://cdn.example.com/bg/japan.jpg",
+    "title": "Japan Scenery"
+  }
+]
